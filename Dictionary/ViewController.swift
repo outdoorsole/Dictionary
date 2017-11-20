@@ -13,6 +13,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // Empty array to store words
     var words: [String] = ["apple", "egg", "grape", "sausage", "wine"]
     
+    var spanishWords: [String] = ["manzana", "huevo", "uva", "salchicha", "vino"]
+    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var wordImage: UIImageView!
     
@@ -39,6 +41,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("didSelectRow \(row)")
+        wordLabel.text = spanishWords[row]
         if words[row] == "apple" {
             wordImage.image = UIImage(named: "apple")
         } else if words[row] == "egg" {
