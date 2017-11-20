@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    // Empty array to store words
+    var words: [String] = ["apple", "egg", "grape", "sausage", "wine"]
+    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var wordImage: UIImageView!
     
@@ -28,7 +32,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 5
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return words[row]
+    }
 
 }
 
