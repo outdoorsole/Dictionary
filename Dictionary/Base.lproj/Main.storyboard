@@ -22,13 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZJ-VT-ABY">
-                                <rect key="frame" x="166" y="50" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZJ-VT-ABY">
+                                <rect key="frame" x="137" y="50" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5f4-KH-x73"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRC-sU-QK2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRC-sU-QK2">
                                 <rect key="frame" x="67.5" y="111" width="240" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="D7w-Ea-Ez7"/>
@@ -36,7 +39,10 @@
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoE-re-0CS">
-                                <rect key="frame" x="0.0" y="306" width="375" height="331"/>
+                                <rect key="frame" x="0.0" y="281" width="375" height="356"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="356" id="nGU-Q7-BYi"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="LpX-fZ-g3H"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bwa-da-arj"/>
@@ -47,7 +53,7 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zoE-re-0CS" secondAttribute="bottom" constant="30" id="LI2-jT-t0x"/>
                             <constraint firstItem="vRC-sU-QK2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZr-cB-AOo"/>
-                            <constraint firstItem="zoE-re-0CS" firstAttribute="top" secondItem="vRC-sU-QK2" secondAttribute="bottom" constant="65" id="dSZ-S1-ecX"/>
+                            <constraint firstItem="zoE-re-0CS" firstAttribute="top" secondItem="vRC-sU-QK2" secondAttribute="bottom" constant="40" id="dSZ-S1-ecX"/>
                             <constraint firstAttribute="trailing" secondItem="zoE-re-0CS" secondAttribute="trailing" id="hNh-ds-UM8"/>
                             <constraint firstItem="vRC-sU-QK2" firstAttribute="top" secondItem="zZJ-VT-ABY" secondAttribute="bottom" constant="40" id="mbm-EV-gej"/>
                             <constraint firstItem="zZJ-VT-ABY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="rdl-Hd-vU4"/>
