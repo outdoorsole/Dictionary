@@ -36,11 +36,16 @@
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoE-re-0CS">
-                                <rect key="frame" x="0.0" y="306" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="306" width="375" height="331"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LpX-fZ-g3H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bwa-da-arj"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zoE-re-0CS" secondAttribute="bottom" constant="30" id="LI2-jT-t0x"/>
                             <constraint firstItem="vRC-sU-QK2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZr-cB-AOo"/>
                             <constraint firstItem="zoE-re-0CS" firstAttribute="top" secondItem="vRC-sU-QK2" secondAttribute="bottom" constant="65" id="dSZ-S1-ecX"/>
                             <constraint firstAttribute="trailing" secondItem="zoE-re-0CS" secondAttribute="trailing" id="hNh-ds-UM8"/>
@@ -50,6 +55,10 @@
                             <constraint firstItem="zoE-re-0CS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zOj-ZA-kcg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wordImage" destination="vRC-sU-QK2" id="FIu-lt-h78"/>
+                        <outlet property="wordLabel" destination="zZJ-VT-ABY" id="L9C-Zr-u1y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

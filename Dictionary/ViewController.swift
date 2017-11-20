@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var wordLabel: UILabel!
+    @IBOutlet weak var wordImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: UIPickerViewDataSource methods
+    // 1) returns the number of 'columns' to display.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-
+    
+    // 2) returns the # of rows in each component.
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 5
+    }
+    
+    
 
 }
 
