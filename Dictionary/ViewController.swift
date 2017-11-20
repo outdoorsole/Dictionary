@@ -32,8 +32,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 5
     }
     
+    // MARK: UIPickerViewDelegate optional methods
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return words[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("didSelectRow \(row)")
     }
 
 }
