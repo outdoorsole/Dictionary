@@ -39,6 +39,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("didSelectRow \(row)")
+        if words[row] == "apple" {
+            wordImage.image = UIImage(named: "apple")
+        } else if words[row] == "egg" {
+            wordImage.image = UIImage(named: "egg")
+        } else if words[row] == "grape" {
+            wordImage.image = UIImage(named: "grape")
+        } else if words[row] == "sausage" {
+            wordImage.image = UIImage(named: "sausage")
+        } else if words[row] == "wine" {
+            wordImage.image = UIImage(named: "wine")
+        } else {
+            print("no word has been selected")
+        }
     }
 
 }
